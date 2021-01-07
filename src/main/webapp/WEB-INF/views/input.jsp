@@ -9,7 +9,9 @@
 <title>Input</title>
 <style>
 	.container{
+		width:300px;
 		border: 1px solid black;
+		padding: 10px;
 		margin: auto;
 	}
 </style>
@@ -17,8 +19,9 @@
 <body>
 	<div class=container>
     <form action="input.person" class=box>
-        Name : <input type=text name=name>
-        Message : <textarea name=message></textarea>
+        Name : <input type=text name=name required><br><br>
+        Message : <textarea name=message required></textarea><br><br>
+        <input type=submit>
     </form>
 </div>
 </body>
