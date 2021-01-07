@@ -20,7 +20,7 @@ public class PersonController {
 	
 	@RequestMapping("toInput.person")
 	public String toInput() {
-		return "input.jsp";
+		return "input";
 	}
 	@RequestMapping("input.person")
 	public String input(PersonDTO dto) {
