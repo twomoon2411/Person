@@ -13,6 +13,6 @@
 		update person set message=#{message} where seq=#{seq}
 	</update>
 	<delete id="delete">
-		delete from messages where seq=#{seq}
+		delete from person where seq=#{seq}
 	</delete>
 </mapper>
