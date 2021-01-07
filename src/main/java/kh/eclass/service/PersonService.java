@@ -1,8 +1,10 @@
+
 package kh.eclass.service;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.DataBinder;
 
 import kh.eclass.dao.PersonDAO;
 import kh.eclass.dto.PersonDTO;
@@ -15,5 +17,9 @@ public class PersonService {
 	private PersonDAO dao;
 	public int input(PersonDTO dto) {
 		return dao.insert(dto);
+	}
+	
+	public List<PersonDTO> selectAll(){
+		return dao.selectAll();
 	}
 }
