@@ -4,6 +4,7 @@ package kh.eclass.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kh.eclass.service.PersonService;
@@ -24,4 +25,9 @@ public class PersonController {
 		return "output";
 	}
 	
+	@ExceptionHandler
+	public String exception(Exception e) {
+		e.printStackTrace();
+		return "error";
+	}
 }
