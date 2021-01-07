@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.DataBinder;
 
 import kh.eclass.dao.PersonDAO;
+import kh.eclass.dto.PersonDTO;
 
 
 @Service
@@ -12,7 +13,7 @@ public class PersonService {
 	
 	@Autowired
 	private PersonDAO dao;
-	public int input(String name, String message) {
-		return dao.input(name, message);
+	public int input(PersonDTO dto) {
+		return dao.insert(dto);
 	}
 }
